@@ -1,0 +1,52 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { TimeComponent } from './time/time.component';
+import { SummaryComponent } from './summary/summary.component';
+import { ExpenseComponent } from './expense/expense.component';
+import { ChargecodesComponent } from './chargecodes/chargecodes.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { FooterComponent } from './footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { provideNativeDateAdapter } from '@angular/material/core';
+
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { MultiSelectModule } from 'primeng/multiselect';
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    TimeComponent,
+    SummaryComponent,
+    ExpenseComponent,
+    ChargecodesComponent,
+    FooterComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+   
+    FormsModule,
+    MultiSelectModule,
+    DropdownModule,
+  
+  ],
+  providers: [provideNativeDateAdapter()],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}

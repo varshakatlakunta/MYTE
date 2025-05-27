@@ -1,0 +1,16 @@
+table{
+    border: 1px solid black;
+    padding: 10px;
+    height: 25%;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.button{
+    display: flex;
+    .pushright{
+       margin-left: auto;
+    }
+}
+        
