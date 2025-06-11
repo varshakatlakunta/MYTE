@@ -1,16 +1,29 @@
 table{
     border: 1px solid black;
     padding: 10px;
-    height: 25%;
     width: 100%;
-    text-align: left;
+    text-align: right;
     border-collapse: collapse;
+    thead, tbody,th, tr,td{
+        border: 1px solid #ccc;
+        padding: 4px;
+    }
+    .spacer-row{
+        height: 30px;
+    }
 }
 
 .button{
     display: flex;
     .pushright{
        margin-left: auto;
-    }
+       margin-right: 20px;
+       display: flex;
+       gap: 10px;
+    }   
 }
-        
+ 
+.weekend{
+  background-color: #e6e2e3;
+  color: black;
+}

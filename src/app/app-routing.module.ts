@@ -5,13 +5,15 @@ import { timeInterval } from 'rxjs';
 import { ExpenseComponent } from './expense/expense.component';
 import { ChargecodesComponent } from './chargecodes/chargecodes.component';
 import { SummaryComponent } from './summary/summary.component';
+import { ExpenseDetailComponent } from './expense-detail/expense-detail.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'/time', pathMatch:'full' },
+  {path:'', component:TimeComponent},
   {path: 'time' , component:TimeComponent},
   {path: 'expenses' , component:ExpenseComponent},
   {path: 'chargecode' , component:ChargecodesComponent},
-  {path: 'summary' , component:SummaryComponent}
+  {path: 'summary' , component:SummaryComponent},
+  {path: 'expenses/detail', component:ExpenseDetailComponent},
 ];
 
 @NgModule({

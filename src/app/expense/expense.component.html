@@ -1,20 +1,27 @@
-<div class="card flex justify-content-center">
+<div class="toolbar">
+<div class="dropdown" >
+<mat-card>
     <p-dropdown 
         [options]="expenses" 
         [(ngModel)]="selectedExpense" 
         optionLabel="name"
-        placeholder="Select an Expense" >
+        placeholder="Select an Expense" 
+        (onChange)="onExpenseChange()"
+        styleClass="w-full" >
     </p-dropdown>
+</mat-card>
 </div>
-<div class="toolbar">
-    <div class="pushright">
-    <button mat-flat-button >New</button>
-    <button mat-flat-button color="primary">Submit</button>
 
+<div class="pushright">
+    <button mat-flat-button >Draft</button>
+    <button mat-flat-button color="primary">Submit</button>
 </div>
 </div>
 <br>
 <br>
-<span>
+<span *ngIf="!selectedExpense">
     There are no expenses for the selected period
 </span>
+<div *ngIf="selectedExpense">
+    <app-expense-detail></app-expense-detail>
+</div>

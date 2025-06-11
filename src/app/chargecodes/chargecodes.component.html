@@ -1,1 +1,49 @@
-<p>chargecodes works!</p>
+<div class="toolbar">
+    <div class="left-section" >
+        <input type="text" placeholder="Enter Charge Code" name="chargecode" [(ngModel)]="addchargecode"/> 
+        <button mat-button (click)="add()"> Add </button>
+    </div>
+    
+    <div class="right-section">
+        <button mat-button>Draft</button>
+        <button mat-raised-button color="primary">Submit</button>
+    </div>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Display</th>
+                <th> Type </th>
+                <th> SubType</th>
+                <th>Client</th>
+                <th>Country</th>
+                <th>Description</th>
+                <th>Chargecode</th>
+                <th>Owner</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let code of chargecodes">
+                <td>
+                 <!--<input class="green-checkbox" type="checkbox" [(ngModel)]="code.selected" />-->
+                 <mat-checkbox color="primary" [(ngModel)]="code.selected"></mat-checkbox>
+                </td>
+                <td>
+                   <mat-slide-toggle color="primary" [(ngModel)]="code.selected"></mat-slide-toggle>
+                </td>
+                <td>{{code.Type}}</td>
+                <td>{{code.SubType}}</td>
+                <td>{{code.Client}}</td>
+                <td>{{code.Country}}</td>
+                <td>{{code.Description}}</td>
+                <td>{{code.Chargecode}}</td>
+                <td>{{code.Owner}}</td>
+            </tr>
+        </tbody>
+        
+
+    </table>
+</div>

@@ -1,0 +1,27 @@
+.toolbar{
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    .left-section{
+        font-weight: bold;
+    }
+    .right-section{
+        display: flex;
+        gap: 10px;
+        margin-right: 20px;
+    }
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    text-align: center;
+    thead, tbody,th, tr,td{
+        border: 1px solid #ccc;
+    }
+}
+.green-checkbox:checked{
+    accent-color: #4caf50;
+}

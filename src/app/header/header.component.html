@@ -1,15 +1,35 @@
-<div class="container">
-    <span >myTimeandExpenses</span>
-</div>
+<p>
+    <mat-toolbar>
+        <span >myTimeandExpenses</span>
+        <div class="icons">
+            <button mat-icon-button>
+                <mat-icon fontIcon="notifications"> </mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon fontIcon="help"></mat-icon>  
+            </button>
+            <button mat-icon-button>
+                <mat-icon fontIcon="settings"></mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon fontIcon="person"></mat-icon>
+            </button>
+
+        </div>
+    </mat-toolbar>
+</p>
+    
 <div class="navlink">
+    <!--
     <nav>
         <ul>
-            <li><a routerLink="/time"> TIME </a> </li>
-            <li><a routerLink="/expenses"> EXPENSES </a></li>
-            <li><a routerLink="/chargecode"> CHARGECODES </a></li>
-            <li><a routerLink="/summary"> SUMMARY </a></li>
+            <li><a routerLink="/time" routerLinkActive="active-link"> TIME </a> </li>
+            <li><a routerLink="/expenses" routerLinkActive="active-link"> EXPENSES </a></li>
+            <li><a routerLink="/chargecode" routerLinkActive="active-link"> CHARGECODES </a></li>
+            <li><a routerLink="/summary" routerLinkActive="active-link"> SUMMARY </a></li>
         </ul> 
-        <!--<div class="date">
+        
+        <div class="date">
             <mat-form-field >
                 <mat-label>Choose a date</mat-label>
                 <input matInput [matDatepicker]="picker">
@@ -17,9 +37,21 @@
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
-        </div> -->
+        </div>
     </nav>
-    <hr>
+-->
+<!--- using angular material tabs
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link routerLink="/time" routerLinkActive="active-link">TIME </a>
+        <a mat-tab-link routerLink="/expenses" routerLinkActive="active-link"> EXPENSES </a>
+        <a mat-tab-link routerLink="/chargecode" routerLinkActive="active-link"> CHARGECODES </a>
+        <a mat-tab-link routerLink="/summary" routerLinkActive="active-link"> SUMMARY </a>
+    </nav>
+-->
+
+<button mat-button  routerLink="/time" routerLinkActive="active-link"> TIME </button>
+<button mat-button  routerLink="/expenses" routerLinkActive="active-link"> EXPENSES</button>
+<button mat-button  routerLink="/chargecode" routerLinkActive="active-link"> CHARGECODES</button>
+<button mat-button  routerLink="/summary" routerLinkActive="active-link"> SUMMARY </button>
 </div>
-
-
+<hr>

@@ -12,7 +12,7 @@
   <button mat-flat-button >Delete</button>
   <button mat-flat-button >Help</button>
   <div class="pushright">
-  <button mat-flat-button >New</button>
+  <button mat-flat-button >Draft</button>
   <button mat-flat-button color="primary">Submit</button>
 </div>
 </div>
@@ -22,14 +22,17 @@
  <table>
     <thead>
         <tr>
-            <th *ngFor="let col of displaycols"> {{col}}</th>
+            <th *ngFor="let col of displaycols"
+            [ngClass]="{'weekend': isWeekend(col)}"> {{col}}</th>
         </tr>
      </thead>
      <tbody>
-        <tr *ngFor="let row of data">
-            <td *ngFor="let col of displaycols">{{row[col]}}</td>
+        <tr *ngFor="let row of data" [ngClass]="{'spacer-row':row.isSpacer}">
+            <td *ngFor="let col of displaycols"
+            [ngClass]="{'weekend': isWeekend(col)}">{{row[col]}}</td>
         </tr>
      </tbody>
+
  </table>
 
  

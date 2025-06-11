@@ -1,0 +1,154 @@
+<div *ngIf="expenseCode === 'IE'">
+   <mat-toolbar class="head">
+    <span>Telecom/Internet Expenses</span>
+    <div class="button">
+        <button style="margin-right: 12px;" (click)="close()">Close</button>
+        <button mat-flat-button color="primary" (click)="save()">Save</button>
+    </div> 
+   </mat-toolbar>
+   <br>
+
+   <form >
+    <div class="top">
+        <label>Charge Code*</label><br>
+        <input type="text" name="chargeCode" [(ngModel)]="chargeCode" style="width:500px; height: 25px;"/>
+        <br><br>
+        <label>Country/Region of Expense*</label>
+        <p-dropdown
+          [options]="country" 
+          [(ngModel)]="selectedCountry" 
+          optionLabel="name"
+            >
+        </p-dropdown>
+        <br><br>
+        <label>From*</label>
+        <input type="date" name="from" [(ngModel)]="from" style="width:500px; height: 25px;">
+     
+        <label>To*</label>
+        <input type="date" name="to" [(ngModel)]="to" style="width:500px; height: 25px;"><br><br>
+
+        <label>Amount*</label>
+        <input type="number" name="amount" [(ngModel)]="amount" style="width:500px; height: 25px;"/>
+        <br/><br>
+    
+        <label>Invoice Number*</label>
+        <input type="text" name="invoice" [(ngModel)]="invoice" style="width:500px; height: 25px;"><br><br>
+
+
+<p>
+  Important points to be followed.<br>
+  Do not upload passwortd protected file while uploading the supporting document in MyTE</p>
+<br>
+
+<label>Comments*</label><br>
+<input type="text" name="comments" [(ngModel)]="comments" style="width:500px; height: 100px;" />
+<hr>
+<br>
+
+<input type="file" name="receipt" style="width:500px; height: 25px;" />
+</div>
+</form>
+</div>
+
+<div *ngIf="expenseCode === 'ME'">
+  <mat-toolbar class="head">
+   <span>Meal Expenses</span>
+   <div class="button">
+       <button style="margin-right: 12px;" (click)="close()">Close</button>
+       <button mat-flat-button color="primary" (click)="save()">Save</button>
+   </div> 
+  </mat-toolbar>
+  <br>
+
+  <form >
+   <div class="top">
+       <label>Charge Code*</label><br>
+       <input type="text" name="chargeCode" [(ngModel)]="chargeCode" style="width:500px; height: 25px;"/>
+       <br><br>
+       <label>Country/Region of Expense*</label>
+       <p-dropdown
+         [options]="country" 
+         [(ngModel)]="selectedCountry" 
+         optionLabel="name"
+           >
+       </p-dropdown>
+       <br><br>
+       <label>From*</label>
+       <input type="date" name="from" [(ngModel)]="from" style="width:500px; height: 25px;">
+    
+       <label>To*</label>
+       <input type="date" name="to" [(ngModel)]="to" style="width:500px; height: 25px;"><br><br>
+
+       <label>Amount*</label>
+       <input type="number" name="amount" [(ngModel)]="amount" style="width:500px; height: 25px;"/>
+       <br/><br>
+   
+       <label>Invoice Number*</label>
+       <input type="text" name="invoice" [(ngModel)]="invoice" style="width:500px; height: 25px;"><br><br>
+
+
+<p>
+ Important points to be followed.<br>
+ Do not upload passwortd protected file while uploading the supporting document in MyTE</p>
+<br>
+
+<label>Comments*</label><br>
+<input type="text" name="comments" [(ngModel)]="comments"  style="width:500px; height: 100px;"/>
+<hr>
+<br>
+
+<input type="file" name="receipt" style="width:500px; height: 25px;"/>
+</div>
+</form>
+</div>
+<div *ngIf="expenseCode === 'TE'">
+  <mat-toolbar class="head">
+   <span>Travel Expenses</span>
+   <div class="button">
+       <button style="margin-right: 12px;" (click)="close()">Close</button>
+       <button mat-flat-button color="primary" (click)="save()">Save</button>
+   </div> 
+  </mat-toolbar>
+  <br>
+
+  <form >
+   <div class="top">
+       <label>Charge Code*</label><br>
+       <input type="text" name="chargeCode" [(ngModel)]="chargeCode" style="width:500px; height: 25px;"/>
+       <br><br>
+       <label>Country/Region of Expense*</label>
+       <p-dropdown
+         [options]="country" 
+         [(ngModel)]="selectedCountry" 
+         optionLabel="name"
+           >
+       </p-dropdown>
+       <br><br>
+       <label>From*</label>
+       <input type="date" name="from" [(ngModel)]="from" style="width:500px; height: 25px;">
+    
+       <label>To*</label>
+       <input type="date" name="to" [(ngModel)]="to" style="width:500px; height: 25px;"><br><br>
+
+       <label>Amount*</label>
+       <input type="number" name="amount" [(ngModel)]="amount" style="width:500px; height: 25px;"/>
+       <br/><br>
+   
+       <label>Invoice Number*</label>
+       <input type="text" name="invoice" [(ngModel)]="invoice" style="width:500px; height: 25px;"><br><br>
+
+
+<p>
+ Important points to be followed.<br>
+ Do not upload passwortd protected file while uploading the supporting document in MyTE</p>
+<br>
+
+<label>Comments*</label><br>
+<input type="text" name="comments" [(ngModel)]="comments"  style="width:500px; height: 100px;"/>
+<hr>
+<br>
+
+<input type="file" name="receipt" style="width:500px; height: 25px;"/>
+</div>
+</form>
+</div>
