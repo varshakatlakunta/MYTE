@@ -27,5 +27,10 @@ span{
     padding:5px;
 }
 ::ng-deep .p-dropdown-item{
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
+    border-bottom: 0.5px solid black;
+}
+
+::ng-deep .p-dropdown-items {
+  background-color: #f9f6f6;
 }
