@@ -19,4 +19,9 @@ export class ChargecodesComponent {
     this.cs.addcode(this.addchargecode);
     this.addchargecode = '';
   }
+
+  sub(){
+    this.cs.addcode(this.addchargecode);
+    this.addchargecode = '';
+  }
 }
